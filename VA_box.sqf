@@ -1,7 +1,7 @@
 _boxArray = [box1,box2];	//List the varible for each box seperate with comma
 
 // Check if boxes exists
-if (isNil "box1") exitWith {_boxArray = [box2]};       //Insert another or option here for each 1234
+if (isNil "box1") exitWith {_boxArray = [box2]};       //Insert another or option here for each 12345
 if (isNil "box2") exitWith {_boxArray = [box1]};
 
 _count = count _boxArray
