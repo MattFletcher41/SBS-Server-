@@ -1,8 +1,10 @@
 _boxArray = [box1,box2];	//List the varible for each box seperate with comma
 
 // Check if boxes exists
-if ((isNil "box1") or (isNil "box2")) exitWith { };       //Insert another or option here for each
+if (isNil "box1") exitWith {_boxArray = [box2]};       //Insert another or option here for each
+if (isNil "box2") exitWith {_boxArray = [box1]};
 
+_count = count _boxArray
 
 _defWeapon = [
 	"UK3CB_BAF_L85A2",
@@ -255,7 +257,7 @@ _defBackpacks = [
 	"V_PlateCarrier1_blk",
 	"V_PlateCarrier2_blk",
 	"V_Chestrig_blk",
-	"V_Chestrig_rgr",  
+	"V_Chestrig_rgr",
 	"V_Chestrig_oli",
 	"V_Chestrig_khk",
 	"V_PlateCarrierL_CTRG",
@@ -269,7 +271,7 @@ _defBackpacks = [
 	"V_mas_uk_PlateCarrier2_rgr",
 	"V_mas_uk_PlateCarrierGL_rgr",
 	"V_mas_uk_ChestrigB_rgr",
-	"V_mas_uk_Rangemaster_belt_d", 
+	"V_mas_uk_Rangemaster_belt_d",
 	"V_mas_uk_BandollierB_rgr_d",
 	"V_mas_uk_PlateCarrier1_rgr_d",
 	"V_mas_uk_PlateCarrier2_rgr_d",
@@ -304,12 +306,12 @@ _defBackpacks = [
  ];
 
 
-for "_i" from 0 to 1 do {
+for "_i" from 0 to _count do {
 	_k = _boxArray select _i;
 
 
-	
-	//##################// RIFLEMAN //##################//   
+
+	//##################// RIFLEMAN //##################//
 			_custWeaponRifleman = [
 			"arifle_mas_arx_l",
 			"arifle_mas_arx",
@@ -338,13 +340,13 @@ for "_i" from 0 to 1 do {
 			"arifle_mas_mk16_l",
 			"UK3CB_BAF_L86A2"
 			];
-			
+
 			_custItemRifleman = [
 			];
-			
+
 			_custWeaponRiflemanComp = _custWeaponRifleman + _defWeapon;
 			_custItemRiflemanComp = _custItemRifleman + _defItem;
-			
+
 			if (typeof player == "B_mas_uk_Soldier_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponRiflemanComp, true] call BIS_fnc_addVirtualweaponCargo;
@@ -354,22 +356,22 @@ for "_i" from 0 to 1 do {
 					[_k, true, true] call BIS_fnc_addVirtualMagazineCargo;
 
 					[_k, _custItemRiflemanComp, true] call BIS_fnc_addVirtualItemCargo;
-				};		
+				};
 	//######################################################//
-	
-		//##################// SQAUD - LEAD //##################// 
+
+		//##################// SQAUD - LEAD //##################//
 			_custWeaponSquadL = [
 			"arifle_mas_arx_l_gl",
 			"UK3CB_BAF_L85A2_UGL",
 			"RHARD_M4DDRGL_F",
 			"arifle_mas_m4_gl",
 			"arifle_mas_mk16_l_gl",
-			"Rangefinder"		
+			"Rangefinder"
 
 			];
-			
+
 			_custWeaponSquadLComp = _custWeaponSquadL + _defWeapon + _custWeaponRifleman;
-			
+
 			if (typeof player == "B_mas_uk_Soldier_SL_F") then		//Replace B_Soldier_SL_F with your unit class name
 				{
 					[_k, _custWeaponSquadLComp, true] call BIS_fnc_addVirtualweaponCargo;
@@ -379,9 +381,9 @@ for "_i" from 0 to 1 do {
 					[_k, true, true] call BIS_fnc_addVirtualMagazineCargo;
 
 					[_k, _defItem, true] call BIS_fnc_addVirtualItemCargo;
-				};		
+				};
 	//######################################################//
-	
+
 	//##################// AR //##################//
 			_custWeaponAR = [
 			"hlc_lmg_minimi_railed",
@@ -393,14 +395,14 @@ for "_i" from 0 to 1 do {
 			"LMG_Mk200_F",
 			"arifle_mas_m27m"
 			];
-			
+
 			_custItemAR = [
-			
+
 			];
-			
+
 			_custWeaponARComp = _custWeaponAR + _defWeapon;
 			_custItemARComp = _custItemAR + _defItem;
-			
+
 			if (typeof player == "B_mas_uk_soldier_AR_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponARComp, true] call BIS_fnc_addVirtualweaponCargo;
@@ -410,26 +412,26 @@ for "_i" from 0 to 1 do {
 					[_k, true, true] call BIS_fnc_addVirtualMagazineCargo;
 
 					[_k, _custItemARComp, true] call BIS_fnc_addVirtualItemCargo;
-				};		
+				};
 	//######################################################//
-	
+
 		//##################// JTAC //##################//
 			_custWeaponJTAC = [
-			
+
 			];
-			
+
 			_custItemJTAC = [
 			];
-			
-			_custBackpackJTAC = [ 
-		
+
+			_custBackpackJTAC = [
+
 			"tf_rt1523g",
 			"tf_rt1523g_big"
 			];
 			_custWeaponJTACComp = _custWeaponJTAC + _defWeapon + _custWeaponRifleman;
 			_custItemJTACComp = _custItemJTAC + _defItem;
 			_custBackpackJTACComp = _custBackpackJTAC + _defBackpacks;
-			
+
 			if (typeof player == "B_mas_uk_Soldier_JTAC_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponJTACComp, true] call BIS_fnc_addVirtualweaponCargo;
@@ -439,25 +441,25 @@ for "_i" from 0 to 1 do {
 					[_k, true, true] call BIS_fnc_addVirtualMagazineCargo;
 
 					[_k, _custItemJTACComp, true] call BIS_fnc_addVirtualItemCargo;
-				};		
+				};
 	//######################################################//
-	
+
 			//##################// Pointman //##################//
 			_custWeaponPointman = [
 			"bpx_uts15",
 			"arifle_mas_m1014",
 			"arifle_mas_aa12"
 			];
-			
+
 			_custItempointman = [
 			];
-			
-			_custBackpackpointman = [ 
+
+			_custBackpackpointman = [
 			];
 			_custWeaponPointmanComp = _custWeaponPointman + _defWeapon + _custWeaponRifleman;
 			_custItemPointmanComp = _custItemPointman + _defItem;
 			_custBackpackpointmanComp = _custBackpackPointman + _defBackpacks;
-			
+
 			if (typeof player == "B_mas_uk_Soldier_exb_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponPointmanComp, true] call BIS_fnc_addVirtualweaponCargo;
@@ -467,9 +469,9 @@ for "_i" from 0 to 1 do {
 					[_k, true, true] call BIS_fnc_addVirtualMagazineCargo;
 
 					[_k, _custItemPointmanComp, true] call BIS_fnc_addVirtualItemCargo;
-				};		
+				};
 	//######################################################//
-	
+
 	//##################// Marksman //##################//
 			_custWeaponMarksman = [
 			"srifle_DMR_05_blk_F",
@@ -481,7 +483,7 @@ for "_i" from 0 to 1 do {
 			"srifle_DMR_03_F",
 			"srifle_mas_sr25"
 			];
-			
+
 			_custItemMarksman = [
 			"optic_AMS",
 			"optic_AMS_snd",
@@ -492,13 +494,13 @@ for "_i" from 0 to 1 do {
 			"iansky_nfbeast",
 			"Rangefinder"
 			];
-			
-			_custBackpackMarksman = [ 
+
+			_custBackpackMarksman = [
 			];
 			_custWeaponMarksmanComp = _custWeaponMarksman + _defWeapon;
 			_custItemMarksmanComp = _custItemMarksman + _defItem;
 			_custBackpackMarksmanComp = _custBackpackMarksman + _defBackpacks;
-			
+
 			if (typeof player == "B_mas_uk_Soldier_M_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponMarksmanComp, true] call BIS_fnc_addVirtualweaponCargo;
@@ -508,28 +510,28 @@ for "_i" from 0 to 1 do {
 					[_k, true, true] call BIS_fnc_addVirtualMagazineCargo;
 
 					[_k, _custItemMarksmanComp, true] call BIS_fnc_addVirtualItemCargo;
-				};		
+				};
 	//######################################################//
-	
+
 	//##################// AT //##################//
 			_custWeaponAT = [
 			"launch_NLAW_F",
 			"mas_laucn_smaw_F"
 			];
-			
+
 			_custItemAT = [
 			"ACE_DefusalKit",
 			"ACE_EntrenchingTool",
 			"ACE_Clacker",
 			"ACE_wirecutter"
 			];
-			
-			_custBackpackAT = [ 
+
+			_custBackpackAT = [
 			];
 			_custWeaponATComp = _custWeaponAT + _defWeapon + _custWeaponRifleman;
 			_custItemATComp = _custItemAT + _defItem;
 			_custBackpackATComp = _custBackpackAT + _defBackpacks;
-			
+
 			if (typeof player == "B_mas_uk_Soldier_LAT_F_rec_an") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponATComp, true] call BIS_fnc_addVirtualweaponCargo;
@@ -539,6 +541,6 @@ for "_i" from 0 to 1 do {
 					[_k, true, true] call BIS_fnc_addVirtualMagazineCargo;
 
 					[_k, _custItemATComp, true] call BIS_fnc_addVirtualItemCargo;
-				};		
+				};
 	//######################################################//
 };
