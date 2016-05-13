@@ -345,7 +345,7 @@ for "_i" from 0 to 1 do {
 			_custWeaponRiflemanComp = _custWeaponRifleman + _defWeapon;
 			_custItemRiflemanComp = _custItemRifleman + _defItem;
 			
-			if (typeof player == "B_Soldier_F") then		//Replace B_Soldier_F with your unit class name
+			if (typeof player == "B_mas_uk_Soldier_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponRiflemanComp, true] call BIS_fnc_addVirtualweaponCargo;
 
@@ -370,7 +370,7 @@ for "_i" from 0 to 1 do {
 			
 			_custWeaponSquadLComp = _custWeaponSquadL + _defWeapon + _custWeaponRifleman;
 			
-			if (typeof player == "B_Soldier_SL_F") then		//Replace B_Soldier_SL_F with your unit class name
+			if (typeof player == "B_mas_uk_Soldier_SL_F") then		//Replace B_Soldier_SL_F with your unit class name
 				{
 					[_k, _custWeaponSquadLComp, true] call BIS_fnc_addVirtualweaponCargo;
 
@@ -401,7 +401,7 @@ for "_i" from 0 to 1 do {
 			_custWeaponARComp = _custWeaponAR + _defWeapon;
 			_custItemARComp = _custItemAR + _defItem;
 			
-			if (typeof player == "B_soldier_AR_F") then		//Replace B_Soldier_F with your unit class name
+			if (typeof player == "B_mas_uk_soldier_AR_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponARComp, true] call BIS_fnc_addVirtualweaponCargo;
 
@@ -430,7 +430,7 @@ for "_i" from 0 to 1 do {
 			_custItemJTACComp = _custItemJTAC + _defItem;
 			_custBackpackJTACComp = _custBackpackJTAC + _defBackpacks;
 			
-			if (typeof player == "	B_Soldier_A_f") then		//Replace B_Soldier_F with your unit class name
+			if (typeof player == "B_mas_uk_Soldier_JTAC_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponJTACComp, true] call BIS_fnc_addVirtualweaponCargo;
 
@@ -458,7 +458,7 @@ for "_i" from 0 to 1 do {
 			_custItemPointmanComp = _custItemPointman + _defItem;
 			_custBackpackpointmanComp = _custBackpackPointman + _defBackpacks;
 			
-			if (typeof player == "	B_Soldier_GL_f") then		//Replace B_Soldier_F with your unit class name
+			if (typeof player == "B_mas_uk_Soldier_exb_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponPointmanComp, true] call BIS_fnc_addVirtualweaponCargo;
 
@@ -499,7 +499,7 @@ for "_i" from 0 to 1 do {
 			_custItemMarksmanComp = _custItemMarksman + _defItem;
 			_custBackpackMarksmanComp = _custBackpackMarksman + _defBackpacks;
 			
-			if (typeof player == "	B_Soldier_M_f") then		//Replace B_Soldier_F with your unit class name
+			if (typeof player == "B_mas_uk_Soldier_M_F") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponMarksmanComp, true] call BIS_fnc_addVirtualweaponCargo;
 
@@ -530,7 +530,7 @@ for "_i" from 0 to 1 do {
 			_custItemATComp = _custItemAT + _defItem;
 			_custBackpackATComp = _custBackpackAT + _defBackpacks;
 			
-			if (typeof player == "	B_Soldier_GL_f") then		//Replace B_Soldier_F with your unit class name
+			if (typeof player == "B_mas_uk_Soldier_LAT_F_rec_an") then		//Replace B_Soldier_F with your unit class name
 				{
 					[_k, _custWeaponATComp, true] call BIS_fnc_addVirtualweaponCargo;
 
