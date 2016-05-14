@@ -1,10 +1,8 @@
 _boxArray = [box1,box2];	//List the varible for each box seperate with comma
 
 // Check if boxes exists
-if (isNil "box1") exitWith {_boxArray = [box2]};       //Insert another or option here for each 12345 DONT FCUKING ADD SIX
-if (isNil "box2") exitWith {_boxArray = [box1]};
+if ((isNil "box1") or (isNil "box2")) exitWith { };       //Insert another or option here for each
 
-_count = count _boxArray
 
 _defWeapon = [
 	"UK3CB_BAF_L85A2",
@@ -18,7 +16,11 @@ _defWeapon = [
 	"UK3CB_BAF_AT4_AP_Launcher",
 	"UK3CB_BAF_AT4_AT_Launcher",
 	"hlc_smg_mp5a4",
-	"hlc_smg_mp5sd5"
+	"hlc_smg_mp5sd5",
+	"RH_fnp45",
+	"RH_kimber_nw",
+	"RH_uspm",
+	"RH_usp"
 ];
 
 _defBackpacks = [
@@ -41,7 +43,12 @@ _defBackpacks = [
 	"B_mas_m_Bergen_acr_w",
 	"B_mas_m_Bergen_acr_g",
 	"B_mas_m_Bergen_acr",
-	"B_mas_m_Bergen_acr"
+	"B_mas_m_Bergen_acr",
+	"O_UAV_01_backpack_F",
+	"B_mas_Kitbag_wint",
+	"B_mas_Kitbag_black",
+	"B_mas_Kitbag_mul",
+	"B_mas_Kitbag_rng"
 ];
 
  _defItem = [
@@ -69,10 +76,7 @@ _defBackpacks = [
 	"iansky_t1s",
 	"optic_Arco",
 	"optic_mas_Arco_blk",
-	"UK3CB_BAF_SpecterLDS_3D",
-	"UK3CB_BAF_SpecterLDS_Dot_3D",
 	"iansky_specterdr",
-	"iansky_specterdrkf",
 	"FHQ_optic_HWS_G33_DWN",
 	"FHQ_optic_HWS",
 	"iansky_deltapoint",
@@ -100,12 +104,8 @@ _defBackpacks = [
 	"RH_gemtech9",
 	"bipod_01_F_blk",
 	"bipod_01_F_snd",
-	"H_mas_uk_beret",
-	"H_mas_uk_bereta",
 	"H_mas_uk_beretn",
 	"H_mas_uk_MilCap_mcamo",
-	"H_mas_uk_MilCap_mcamo_v",
-	"H_mas_uk_MilCap_mcamo_d",
 	"H_mas_uk_MilCap_mcamo_m",
 	"H_mas_uk_Cap",
 	"H_mas_uk_Cap_headphones",
@@ -121,12 +121,8 @@ _defBackpacks = [
 	"H_mas_uk_woolhat_ht_w",
 	"H_mas_uk_Booniehat_mult",
 	"H_mas_uk_Booniehat_mtp",
-	"H_mas_uk_Booniehat_rgr",
-	"H_mas_uk_Booniehat_des",
 	"H_mas_uk_Booniehat_mul_h",
 	"H_mas_uk_Booniehat_mul_hm",
-	"H_mas_uk_Booniehat_mul_hv",
-	"H_mas_uk_Booniehat_mul_hd",
 	"H_mas_uk_headset_b",
 	"H_mas_uk_Bandana",
 	"H_mas_uk_Bandana_h",
@@ -164,14 +160,10 @@ _defBackpacks = [
 	"H_mas_uk_helmet_pro_b",
 	"H_mas_uk_helmet_pro_gog",
 	"H_mas_uk_helmet_pro_gog_b",
-	"H_HelmetB",
 	"H_HelmetB_camo",
-	"H_HelmetB_paint",
-	"H_HelmetB_light",
 	"H_HelmetSpecB",
 	"H_Booniehat_mcamo",
 	"H_Booniehat_khk_hs",
-	"H_MilCap_mcamo",
 	"G_Combat",
 	"G_Lowprofile",
 	"G_Shades_Black",
@@ -235,19 +227,10 @@ _defBackpacks = [
 	"U_mas_uk_B_CombatUniform_mcam2_vest",
 	"U_mas_uk_B_CombatUniform_mcam3_vest",
 	"U_mas_uk_B_CombatUniform_mcam4_vest",
-	"U_mas_uk_B_CombatUniform_veg",
-	"U_mas_uk_B_CombatUniform_veg_tshirt",
-	"U_mas_uk_B_CombatUniform_veg_vest",
-	"U_mas_uk_B_CombatUniform_veg1_vest",
-	"U_mas_uk_B_CombatUniform_veg2_vest",
-	"U_mas_uk_B_CombatUniform_veg3_vest",
-	"U_mas_uk_B_CombatUniform_des",
-	"U_mas_uk_B_CombatUniform_des_tshirt",
-	"U_mas_uk_B_CombatUniform_des_vest",
-	"U_mas_uk_B_CombatUniform_des1_vest",
-	"U_mas_uk_B_CombatUniform_des2_vest",
-	"U_mas_uk_B_CombatUniform_des3_vest",
 	"U_mas_uk_B_Wetsuit",
+	"U_mas_uk_B_GhillieSuit",
+	"U_mas_uk_B_CombatUniform_sage_vest",
+	"U_mas_uk_B_CombatUniform_sage",
 	"G2_RU_MTP",
 	"G2_CU_MTP",
 	"G3_RU_MTP",
@@ -271,12 +254,6 @@ _defBackpacks = [
 	"V_mas_uk_PlateCarrier2_rgr",
 	"V_mas_uk_PlateCarrierGL_rgr",
 	"V_mas_uk_ChestrigB_rgr",
-	"V_mas_uk_Rangemaster_belt_d",
-	"V_mas_uk_BandollierB_rgr_d",
-	"V_mas_uk_PlateCarrier1_rgr_d",
-	"V_mas_uk_PlateCarrier2_rgr_d",
-	"V_mas_uk_PlateCarrierGL_rgr_d",
-	"V_mas_uk_ChestrigB_rgr_d",
 	"V_mas_uk_Rangemaster_belt_v",
 	"V_mas_uk_BandollierB_rgr_v",
 	"V_mas_uk_PlateCarrier1_rgr_v",
@@ -287,26 +264,44 @@ _defBackpacks = [
 	"V_mas_uk_ChestrigB_rgr_g",
 	"V_mas_uk_PlateCarrier1_rgr_w",
 	"V_mas_uk_ChestrigB_rgr_w",
-	"V_mas_uk_Rangemaster_belt_a",
-	"V_mas_uk_BandollierB_rgr_a",
-	"V_mas_uk_PlateCarrier1_rgr_a",
-	"V_mas_uk_PlateCarrier2_rgr_a",
-	"V_mas_uk_PlateCarrierGL_rgr_a",
-	"V_mas_uk_ChestrigB_rgr_a",
-	"V_mas_uk_Rangemaster_belt_t",
-	"V_mas_uk_BandollierB_rgr_t",
-	"V_mas_uk_PlateCarrier1_rgr_t",
-	"V_mas_uk_PlateCarrier2_rgr_t",
-	"V_mas_uk_PlateCarrierGL_rgr_t",
-	"V_mas_uk_ChestrigB_rgr_t",
 	"V_mas_uk_TacVest_p",
 	"V_mas_uk_TacVest_g",
-	"Binocular"
+	"lbt_comms_coy",
+	"lbt_medical_coy",
+	"lbt_operator_coy",
+	"lbt_tl_coy",
+	"lbt_weapons_coy",
+	"lbt_comms_od",
+	"lbt_medical_od",
+	"lbt_operator_od",
+	"lbt_tl_od",
+	"lbt_weapons_od",
+	"G_mas_wpn_gasmask",
+	"Binocular",
+	"B_UavTerminal",
+	"FHQ_acc_ANPEQ15",
+	"FHQ_acc_ANPEQ15_black",
+	"acc_mas_pointer_IR_b",
+	"acc_mas_pointer_IR_top_b",
+	"acc_mas_pointer_IR",
+	"acc_mas_pointer_IR_top",
+	"PEQ15_A3_Top",
+	"iansky_specterdrkf",
+	"iansky_specterdrkf_d_2D",
+	"iansky_specterdrkf_fde_2D",
+	"iansky_specterdrkf_d",
+	"iansky_specterdrkf_fde",
+	"optic_mas_Holosight_blk",
+	"RH_docter",
+	"muzzle_snds_acp",
+	"RH_gemtech45",
+	"RH_matchsd",
+	"RH_aacusp"
 
  ];
 
 
-for "_i" from 0 to _count do {
+for "_i" from 0 to 1 do {
 	_k = _boxArray select _i;
 
 
@@ -318,6 +313,12 @@ for "_i" from 0 to _count do {
 			"CAG_HK416",
 			"CAG_HK416A_FG",
 			"CAG_HK416C_RS",
+			"CAG_HK416_MX",
+			"CAG_HK416AFG_MX",
+			"CAG_HK416AFG_D",
+			"CAG_HK416CRS_MX",
+			"CAG_HK416CRS_D",
+			"CAG_HK416_D",
 			"arifle_mas_hk416",
 			"UK3CB_BAF_L85A2",
 			"UK3CB_BAF_L85A2_RIS_AFG",
