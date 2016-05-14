@@ -1,8 +1,16 @@
-_boxArray = [box1,box2];	//List the varible for each box seperate with comma
-
 // Check if boxes exists
-if ((isNil "box1") or (isNil "box2")) exitWith { };       //Insert another or option here for each
-
+_boxArray = [];
+for "_t" from 0  to 49 do{
+	_string = format ["box%1", _t];
+	if (isNil _string) then {
+//		hint format ["%1 doesn't exit", _string]
+		}
+		Else {
+			_string = call compile format ["%1", _string];
+			_tempArray = [_string];
+			_boxArray = _boxArray + _tempArray;
+		};
+	};
 
 _defWeapon = [
 	"UK3CB_BAF_L85A2",
@@ -301,10 +309,11 @@ _defBackpacks = [
  ];
 
 
-for "_i" from 0 to 1 do {
-	_k = _boxArray select _i;
+ _c = 0;
 
-
+ for [{_i=0}, {_i < count _boxArray}, {_i=_i+1}] do {
+ 	_k = _boxArray select _c;
+ 	_c = _c + 1;
 
 	//##################// RIFLEMAN //##################//
 			_custWeaponRifleman = [
