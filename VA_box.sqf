@@ -526,7 +526,7 @@ _defBackpacks = [
 	//##################// AT //##################//
 			_custWeaponAT = [
 			"launch_NLAW_F",
-			"mas_laucn_smaw_F"
+			"mas_launch_smaw_F"
 			];
 
 			_custItemAT = [
