@@ -553,4 +553,34 @@ _defBackpacks = [
 					[_k, _custItemATComp, true] call BIS_fnc_addVirtualItemCargo;
 				};
 	//######################################################//
+
+	//##################// Combat Medic //##################//
+	    _custWeaponCombatMedic = [
+	    "launch_NLAW_F",
+	    "mas_laucn_smaw_F"
+	    ];
+
+	    _custItemCombatMedic = [
+	    "ACE_bloodIV",
+	    "ACE_bloodIV_250",
+	    "ACE_bloodIV_500"
+	    ];
+
+	    _custBackpackCombatMedic = [
+	    ];
+	    _custWeaponCombatMedicComp = _custWeaponCombatMedic + _defWeapon + _custWeaponRifleman;
+	    _custItemCombatMedicComp = _custItemCombatMedic + _defItem;
+	    _custBackpackCombatMedicComp = _custBackpackCombatMedic + _defBackpacks;
+
+	    if (typeof player == "B_mas_uk_medic_F") then		//Replace B_Soldier_F with your unit class name
+	      {
+	        [_k, _custWeaponCombatMedicComp, true] call BIS_fnc_addVirtualweaponCargo;
+
+	        [_k, _custBackpackCombatMedicComp, true] call BIS_fnc_addVirtualBackpackCargo;
+
+	        [_k, true, true] call BIS_fnc_addVirtualMagazineCargo;
+
+	        [_k, _custItemCombatMedicComp, true] call BIS_fnc_addVirtualItemCargo;
+	      };
+	//######################################################//
 };
