@@ -530,10 +530,6 @@ _defBackpacks = [
 			];
 
 			_custItemAT = [
-			"ACE_DefusalKit",
-			"ACE_EntrenchingTool",
-			"ACE_Clacker",
-			"ACE_wirecutter"
 			];
 
 			_custBackpackAT = [
@@ -583,4 +579,34 @@ _defBackpacks = [
 	        [_k, _custItemCombatMedicComp, true] call BIS_fnc_addVirtualItemCargo;
 	      };
 	//######################################################//
+
+	//##################// EOD //##################//
+	    _custWeaponEOD = [
+	    ];
+
+	    _custItemEOD = [
+	    "ACE_DefusalKit",
+	    "ACE_EntrenchingTool",
+	    "ACE_Clacker",
+	    "ACE_wirecutter"
+	    ];
+
+	    _custBackpackEOD = [
+	    ];
+	    _custWeaponEODComp = _custWeaponEOD + _defWeapon + _custWeaponRifleman + _custWeaponPointman;
+	    _custItemEODComp = _custItemEOD + _defItem;
+	    _custBackpackEODComp = _custBackpackEOD + _defBackpacks;
+
+	    if (typeof player == "B_mas_uk_Soldier_exp_F") then		//Replace B_Soldier_F with your unit class name
+	      {
+	        [_k, _custWeaponEODComp, true] call BIS_fnc_addVirtualweaponCargo;
+
+	        [_k, _custBackpackEODComp, true] call BIS_fnc_addVirtualBackpackCargo;
+
+	        [_k, true, true] call BIS_fnc_addVirtualMagazineCargo;
+
+	        [_k, _custItemEODComp, true] call BIS_fnc_addVirtualItemCargo;
+	      };
+	//######################################################//
+
 };
