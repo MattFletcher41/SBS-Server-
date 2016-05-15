@@ -7,4 +7,5 @@ AT = B_mas_uk_Soldier_LAT_F_rec_an
 SL = B_mas_uk_Soldier_SL_F
 JTAC = B_mas_uk_Soldier_JTAC_F
 EOD = B_mas_uk_Soldier_exd_F
-Point = B_mas_uk_Soldier_exb_F
+POINT = B_mas_uk_Soldier_exb_F
+AR = B_mas_uk_soldier_AR_F
