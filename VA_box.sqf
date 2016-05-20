@@ -28,7 +28,66 @@ _defWeapon = [
 	"RH_fnp45",
 	"RH_kimber_nw",
 	"RH_uspm",
-	"RH_usp"
+	"RH_usp",
+	"arifle_mas_arx_l",
+	"arifle_mas_arx",
+	"CAG_HK416",
+	"CAG_HK416A_FG",
+	"CAG_HK416C_RS",
+	"CAG_HK416_MX",
+	"CAG_HK416AFG_MX",
+	"CAG_HK416AFG_D",
+	"CAG_HK416CRS_MX",
+	"CAG_HK416CRS_D",
+	"CAG_HK416_D",
+	"arifle_mas_hk416",
+	"UK3CB_BAF_L85A2",
+	"UK3CB_BAF_L85A2_RIS_AFG",
+	"UK3CB_BAF_L85A2_EMAG",
+	"UK3CB_BAF_L85A2_RIS",
+	"RHARD_M4DDR_F",
+	"RHARD_M4DDRP_F",
+	"RHARD_M4DDRPD_F",
+	"RHARD_M4DDRD_F",
+	"RHARD_M4DDR_B_F",
+	"RHARD_M4DDRD_B_F",
+	"arifle_mas_m4vlt",
+	"arifle_mas_m4",
+	"arifle_mas_m4c",
+	"RHARD_MK18_F",
+	"RHARD_MK18E_F",
+	"RHARD_MK18AFG_F",
+	"RHARD_MK18AFG_B_F",
+	"FHQ_arifle_ACR_blk",
+	"arifle_mas_mk16_l",
+	"UK3CB_BAF_L86A2",
+	"arifle_mas_arx_l_gl",
+	"UK3CB_BAF_L85A2_UGL",
+	"RHARD_M4DDRGL_F",
+	"arifle_mas_m4_gl",
+	"arifle_mas_mk16_l_gl",
+	"Rangefinder",
+	"hlc_lmg_minimi_railed",
+	"UK3CB_BAF_L110A2_FIST",
+	"UK3CB_BAF_L86A2",
+	"hlc_m249_Squantoon",
+	"hlc_lmg_m60",
+	"hlc_lmg_mk48",
+	"LMG_Mk200_F",
+	"arifle_mas_m27m",
+	"bpx_uts15",
+	"arifle_mas_m1014",
+	"arifle_mas_aa12",
+	"srifle_DMR_05_blk_F",
+	"srifle_mas_hk417",
+	"UK3CB_BAF_L129A1_AFG",
+	"srifle_DMR_06_camo_F",
+	"srifle_EBR_F",
+	"FHQ_srifle_M2010_BLK",
+	"srifle_DMR_03_F",
+	"srifle_mas_sr25",
+	"launch_NLAW_F",
+	"mas_launch_smaw_F"
 ];
 
 _defBackpacks = [
@@ -56,7 +115,9 @@ _defBackpacks = [
 	"B_mas_Kitbag_wint",
 	"B_mas_Kitbag_black",
 	"B_mas_Kitbag_mul",
-	"B_mas_Kitbag_rng"
+	"B_mas_Kitbag_rng",
+	"tf_rt1523g",
+	"tf_rt1523g_big"
 ];
 
  _defItem = [
@@ -304,8 +365,21 @@ _defBackpacks = [
 	"muzzle_snds_acp",
 	"RH_gemtech45",
 	"RH_matchsd",
-	"RH_aacusp"
-
+	"RH_aacusp","optic_AMS",
+	"optic_AMS_snd",
+	"optic_DMS",
+	"optic_mas_term",
+	"optic_KHS_blk",
+	"ACE_optic_LRPS_2D",
+	"iansky_nfbeast",
+	"Rangefinder",
+	"ACE_bloodIV",
+	"ACE_bloodIV_250",
+	"ACE_bloodIV_500",
+	"ACE_DefusalKit",
+	"ACE_EntrenchingTool",
+	"ACE_Clacker",
+	"ACE_wirecutter"
  ];
 
 
@@ -317,38 +391,7 @@ _defBackpacks = [
 
 	//##################// RIFLEMAN //##################//
 			_custWeaponRifleman = [
-			"arifle_mas_arx_l",
-			"arifle_mas_arx",
-			"CAG_HK416",
-			"CAG_HK416A_FG",
-			"CAG_HK416C_RS",
-			"CAG_HK416_MX",
-			"CAG_HK416AFG_MX",
-			"CAG_HK416AFG_D",
-			"CAG_HK416CRS_MX",
-			"CAG_HK416CRS_D",
-			"CAG_HK416_D",
-			"arifle_mas_hk416",
-			"UK3CB_BAF_L85A2",
-			"UK3CB_BAF_L85A2_RIS_AFG",
-			"UK3CB_BAF_L85A2_EMAG",
-			"UK3CB_BAF_L85A2_RIS",
-			"RHARD_M4DDR_F",
-			"RHARD_M4DDRP_F",
-			"RHARD_M4DDRPD_F",
-			"RHARD_M4DDRD_F",
-			"RHARD_M4DDR_B_F",
-			"RHARD_M4DDRD_B_F",
-			"arifle_mas_m4vlt",
-			"arifle_mas_m4",
-			"arifle_mas_m4c",
-			"RHARD_MK18_F",
-			"RHARD_MK18E_F",
-			"RHARD_MK18AFG_F",
-			"RHARD_MK18AFG_B_F",
-			"FHQ_arifle_ACR_blk",
-			"arifle_mas_mk16_l",
-			"UK3CB_BAF_L86A2"
+
 			];
 
 			_custItemRifleman = [
@@ -371,12 +414,7 @@ _defBackpacks = [
 
 		//##################// SQAUD - LEAD //##################//
 			_custWeaponSquadL = [
-			"arifle_mas_arx_l_gl",
-			"UK3CB_BAF_L85A2_UGL",
-			"RHARD_M4DDRGL_F",
-			"arifle_mas_m4_gl",
-			"arifle_mas_mk16_l_gl",
-			"Rangefinder"
+
 
 			];
 
@@ -396,14 +434,7 @@ _defBackpacks = [
 
 	//##################// AR //##################//
 			_custWeaponAR = [
-			"hlc_lmg_minimi_railed",
-			"UK3CB_BAF_L110A2_FIST",
-			"UK3CB_BAF_L86A2",
-			"hlc_m249_Squantoon",
-			"hlc_lmg_m60",
-			"hlc_lmg_mk48",
-			"LMG_Mk200_F",
-			"arifle_mas_m27m"
+
 			];
 
 			_custItemAR = [
@@ -435,8 +466,7 @@ _defBackpacks = [
 
 			_custBackpackJTAC = [
 
-			"tf_rt1523g",
-			"tf_rt1523g_big"
+
 			];
 			_custWeaponJTACComp = _custWeaponJTAC + _defWeapon + _custWeaponRifleman;
 			_custItemJTACComp = _custItemJTAC + _defItem;
@@ -456,9 +486,7 @@ _defBackpacks = [
 
 			//##################// Pointman //##################//
 			_custWeaponPointman = [
-			"bpx_uts15",
-			"arifle_mas_m1014",
-			"arifle_mas_aa12"
+
 			];
 
 			_custItempointman = [
@@ -484,25 +512,11 @@ _defBackpacks = [
 
 	//##################// Marksman //##################//
 			_custWeaponMarksman = [
-			"srifle_DMR_05_blk_F",
-			"srifle_mas_hk417",
-			"UK3CB_BAF_L129A1_AFG",
-			"srifle_DMR_06_camo_F",
-			"srifle_EBR_F",
-			"FHQ_srifle_M2010_BLK",
-			"srifle_DMR_03_F",
-			"srifle_mas_sr25"
+
 			];
 
 			_custItemMarksman = [
-			"optic_AMS",
-			"optic_AMS_snd",
-			"optic_DMS",
-			"optic_mas_term",
-			"optic_KHS_blk",
-			"ACE_optic_LRPS_2D",
-			"iansky_nfbeast",
-			"Rangefinder"
+
 			];
 
 			_custBackpackMarksman = [
@@ -525,8 +539,7 @@ _defBackpacks = [
 
 	//##################// AT //##################//
 			_custWeaponAT = [
-			"launch_NLAW_F",
-			"mas_launch_smaw_F"
+
 			];
 
 			_custItemAT = [
@@ -552,14 +565,10 @@ _defBackpacks = [
 
 	//##################// Combat Medic //##################//
 	    _custWeaponCombatMedic = [
-	    "launch_NLAW_F",
-	    "mas_laucn_smaw_F"
+
 	    ];
 
 	    _custItemCombatMedic = [
-	    "ACE_bloodIV",
-	    "ACE_bloodIV_250",
-	    "ACE_bloodIV_500"
 	    ];
 
 	    _custBackpackCombatMedic = [
@@ -585,10 +594,6 @@ _defBackpacks = [
 	    ];
 
 	    _custItemEOD = [
-	    "ACE_DefusalKit",
-	    "ACE_EntrenchingTool",
-	    "ACE_Clacker",
-	    "ACE_wirecutter"
 	    ];
 
 	    _custBackpackEOD = [
